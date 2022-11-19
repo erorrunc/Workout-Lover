@@ -10,7 +10,7 @@ exercise_count: int = 0
 def index():
     return render_template('index.html')
 
-@app.route('/create-exercise', methods=["GET", "POST"])
+@app.route('/log-exercise', methods=["GET", "POST"])
 def create_exercise():
     if request.method == "POST":
         global exercise_list
@@ -24,7 +24,7 @@ def create_exercise():
         color: str = request.form['color']
 
         if exercise == '':
-            return render_template("create-exercise.html")
+            return render_template("log-exercise.html")
 
         new_exercise: Exercises = Exercises(exercise_count, exercise, weight, sets, reps, date, color)
         exercise_list.append(new_exercise)
@@ -32,7 +32,7 @@ def create_exercise():
         exercise_count += 1
 
         return render_template("success.html", exercise = exercise, weight = weight, sets = sets, reps = reps, date = date)
-    return render_template("create-exercise.html")
+    return render_template("log-exercise.html")
 
 @app.route('/view-list')
 def view_exercise_list():
