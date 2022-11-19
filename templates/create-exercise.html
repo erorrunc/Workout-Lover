@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CREATE EXERCISE:</title>
+        <link rel='stylesheet' href='/static/bootstrap.min.css'>
+        <link rel='stylesheet' href='/static/styles.css'>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/"><img class="logo" src="/static/logo.png" alt="logo"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/create-exercise">CREATE AN EXERCISE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/view-list">VIEW EXERCISES</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <form method="post">
+            <br / ><label for="exercise">Name of exercise:</label>
+            <br />
+            <input type="text" id="exercise" name="exercise">
+            <br />
+            <br />
+            <label for="weight">Weight (lbs):</label>
+            <br />
+            <input type="text" id="weight" name="weight">
+            <br />
+            <br />
+            <label for="sets">Number of sets:</label>
+            <br />
+            <input type="text" id="sets" name="sets">
+            <br />
+            <br />
+            <label for="reps">Reps per set:</label>
+            <br />
+            <input type="text" id="reps" name="reps">
+            <br />
+            <br />
+            <label for="date">Date:</label>
+            <br />
+            <input type="text" id="date" name="date">
+            <br />
+            <br />
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+                    <option value="grey">Grey</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                </select>
+                <br />
+                <br />
+            <input type="submit" value="CREATE">
+        </form>
+    </body>
+</html>

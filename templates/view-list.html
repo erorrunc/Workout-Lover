@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>VIEW EXERCISES:</title>
+        <link rel='stylesheet' href='/static/bootstrap.min.css'>
+        <link rel='stylesheet' href='/static/styles.css'>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/"><img class="logo" src="/static/logo.png" alt="logo"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/create-exercise">CREATE AN EXERCISE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/view-list">VIEW EXERCISES</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h2>Exercise List:</h2>
+        {% for exercise in exercise_list %}
+            <br/>
+            <div class="exercise {{exercise.color}}-border">
+                <d>Exercise: {{exercise.exercise}}</d><br/>
+                <d>Weight: {{exercise.weight}}</d><br/>
+                <d>Sets: {{exercise.sets}}</d><br/>
+                <d>Reps: {{exercise.reps}}</d><br/>
+                <d>Date: {{exercise.date}}</d><br/>
+            </div>
+        {% endfor %}
+    </body>
+</html>
